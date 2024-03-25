@@ -36,7 +36,8 @@ const addItem = (text) => {
 
 	// Add Eventlistener for the Trash Icon
 	trashIcon.addEventListener('click', () => {
-		item.remove(); // This removes the item from the DOM
+		if(confirm('Are you sure you want to delete this Todo?'))
+		item.remove(); // This removes the item from the DOM	
 	});
 
 	// Append the Icons to the IconsContainer
@@ -66,8 +67,6 @@ function filterItems(e) {
       item.style.display = "none";
     }
   });
-
-  // console.log(text);
 }
 
 // Add Event Listener for the Filter Input
