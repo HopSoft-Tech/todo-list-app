@@ -9,7 +9,12 @@
 body {
   font-family: "Fredoka One", cursive;
   background-image: linear-gradient(to right, #e22865, #37adcd);
+  /* background-color: black; */
   color: #fff;
+}
+
+header {
+  margin-bottom: 3em;
 }
 
 .container {
@@ -19,11 +24,11 @@ body {
 
 #header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
   min-height: 20px;
-  padding: 0 20px;
+  padding: 0 10px;
 }
 
 #header h2 {
@@ -34,6 +39,10 @@ body {
   margin-top: 2px;
   width: 350px;
   text-align: center;
+}
+
+#searchAdd {
+  width: 400px;
 }
 
 .form-input-filter {
@@ -67,9 +76,9 @@ body {
 }
 
 #addItem-input {
-  width: 75%;
+  width: 65%;
   outline: none;
-  padding: 8px;
+  padding: 10px;
   border: 1px solid lightgray;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -81,15 +90,28 @@ body {
   border: 1px solid #e22865;
 }
 
-.user_input button {
+.user_input button.add {
   cursor: pointer;
-  padding: 8px;
+  padding: 10px;
   width: fit-content;
   color: black;
   transition: 0.5s;
   outline: none;
   background-color: lightgray;
   border: 1px solid lightgray;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+button.update {
+  background-color: #228b22;
+  border: none;
+  border: 1px solid #ccc;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  width: fit-content;
+  transition: 0.5s;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
@@ -107,6 +129,7 @@ body {
 .item {
   display: flex;
   justify-content: space-between;
+  /* align-items: center; */
   width: 100%;
   height: auto;
   border-radius: 2px;
@@ -116,8 +139,13 @@ body {
   font-size: 1rem;
   background-color: white;
   border: 1px solid lightgray;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
+  cursor: pointer;
   transition: all 0.3s ease-in-out;
+}
+
+.edit-mode {
+  color: #ccc;
 }
 
 .item:hover {
@@ -130,17 +158,48 @@ body {
   margin: 0 5px;
 }
 
-.lightgray{
-  color:lightgray
+.lightgray {
+  color: lightgray;
 }
 
 i.fa-square-check:not(.lightgray) {
   color: limegreen;
 }
 
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-clear {
+  margin-top: 30px;
+  width: 40%;
+  font-size: 20px;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #f4f4f4;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-shadow: 3px 3px 10px 2px;
+  transition: 0.7s ease-in-out all;
+}
+
+.btn-clear:hover {
+  background-color: green;
+  border-color: #fff;
+}
+
 @media (max-width: 1280px) {
   .container {
     width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    margin-bottom: 1em;
   }
 }
 
