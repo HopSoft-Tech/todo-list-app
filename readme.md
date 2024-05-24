@@ -22,7 +22,7 @@ The Todo List app leverages the Local Storage Web API to store todo items locall
 
 ## Installation
 
-1. Clone the repository: `git clone https://github.com/your-username/todo-list-app.git`
+1. Clone the repository: `git clone https://github.com/HopSoft-Tech/todo-list-app.git`
 2. Open `index.html` in your web browser.
 
 ## Usage
